@@ -156,7 +156,131 @@ syntax keyword ccTest cc_test
 	\ visibility
 
 " Java build rules
-syntax keyword javaRules java_binary java_import java_library java_test java_plugin java_toolchain
+syntax keyword javaBinary java_binary
+	\ name
+	\ deps
+	\ srcs
+	\ data
+	\ resources
+	\ args
+	\ classpath_resources
+	\ create_executable
+	\ deploy_manifest_lines
+	\ deprecation
+	\ distribs
+	\ features
+	\ javacopts
+	\ jvm_flags
+	\ licenses
+	\ main_class
+	\ output_licenses
+	\ plugins
+	\ runtime_deps
+	\ stamp
+	\ tags
+	\ testonly
+	\ visibility
+
+syntax keyword javaImport java_import
+	\ name
+	\ deps
+	\ data
+	\ constraints
+	\ deprecation
+	\ distribs
+	\ exports
+	\ features
+	\ jars
+	\ licenses
+	\ neverlink
+	\ runtime_deps
+	\ srcjar
+	\ tags
+	\ testonly
+	\ visibility
+
+syntax keyword javaLibrary java_library
+	\ name
+	\ deps
+	\ srcs
+	\ data
+	\ resources
+	\ deprecation
+	\ distribs
+	\ exported_plugins
+	\ exports
+	\ features
+	\ javacopts
+	\ licenses
+	\ neverlink
+	\ plugins
+	\ runtime_deps
+	\ tags
+	\ testonly
+	\ visibility
+
+syntax keyword javaTest java_test
+	\ name
+	\ deps
+	\ srcs
+	\ data
+	\ resources
+	\ args
+	\ classpath_resources
+	\ create_executable
+	\ deploy_manifest_lines
+	\ deprecation
+	\ distribs
+	\ features
+	\ flaky
+	\ javacopts
+	\ jvm_flags
+	\ licenses
+	\ local
+	\ main_class
+	\ plugins
+	\ runtime_deps
+	\ shard_count
+	\ size
+	\ stamp
+	\ tags
+	\ testonly
+	\ timeout
+	\ visibility
+
+syntax keyword javaPlugin java_plugin
+	\ name
+	\ deps
+	\ srcs
+	\ data
+	\ resources
+	\ deprecation
+	\ distribs
+	\ features
+	\ javacopts
+	\ licenses
+	\ neverlink
+	\ plugins
+	\ processor_class
+	\ tags
+	\ testonly
+	\ visibility
+
+syntax keyword javaToolchain java_toolchain
+	\ name
+	\ deprecation
+	\ distribs
+	\ encoding
+	\ features
+	\ jvm_opts
+	\ licenses
+	\ misc
+	\ source_version
+	\ tags
+	\ target_version
+	\ testonly
+	\ visibility
+	\ xlint
 
 " Objective-C build rules
 syntax keyword objcRules ios_application ios_device ios_extension ios_extension_binary ios_framework ios_framework_binary objc_binary
@@ -195,7 +319,12 @@ highlight default link androidLibrary Statement
 highlight default link ccBinary       Statement
 highlight default link ccLibrary      Statement
 highlight default link ccTest         Statement
-highlight default link javaRules      Keyword
+highlight default link javaBinary     Statement
+highlight default link javaImport     Statement
+highlight default link javaLibrary    Statement
+highlight default link javaTest       Statement
+highlight default link javaPlugin     Statement
+highlight default link javaToolchain  Statement
 highlight default link objcRules      Keyword
 highlight default link pythonRules    Keyword
 highlight default link shellRules     Keyword
