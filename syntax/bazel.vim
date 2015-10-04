@@ -856,7 +856,75 @@ syntax keyword extraAction extra_action
 	\ visibility
 
 " General rules
-syntax keyword generalRules filegroup genquery test_suite config_setting genrule
+syntax keyword fileGroup filegroup
+	\ name
+	\ srcs
+	\ data
+	\ deprecation
+	\ distribs
+	\ features
+	\ licenses
+	\ output_licenses
+	\ path
+	\ tags
+	\ testonly
+	\ visibility
+
+syntax keyword genQuery genquery
+	\ name
+	\ deps
+	\ data
+	\ deprecation
+	\ distribs
+	\ expression
+	\ features
+	\ licenses
+	\ opts
+	\ scope
+	\ strict
+	\ tags
+	\ testonly
+	\ visibility
+
+syntax keyword testSuite test_suite
+	\ name
+	\ deprecation
+	\ distribs
+	\ features
+	\ licenses
+	\ tags
+	\ testonly
+	\ tests
+	\ visibility
+
+syntax keyword configSetting config_setting
+	\ name
+	\ deprecation
+	\ distribs
+	\ features
+	\ licenses
+	\ tags
+	\ testonly
+	\ values
+	\ visibility
+
+syntax keyword genRule genrule
+	\ name
+	\ srcs
+	\ outs
+	\ cmd
+	\ deprecation
+	\ distribs
+	\ executable
+	\ features
+	\ licenses
+	\ local
+	\ message
+	\ output_to_bindir
+	\ tags
+	\ testonly
+	\ tools
+	\ visibility
 
 " Workspace rules
 syntax keyword workspaceRules bind git_repository http_archive http_file http_jar
@@ -905,5 +973,10 @@ highlight default link shellLibrary        Statement
 highlight default link shellTest           Statement
 highlight default link actionListener      Statement
 highlight default link extraAction         Statement
+highlight default link fileGroup           Statement
+highlight default link genQuery            Statement
+highlight default link testSuite           Statement
+highlight default link configSetting       Statement
+highlight default link genRule             Statement
 highlight default link workspaceRules      Keyword
 
