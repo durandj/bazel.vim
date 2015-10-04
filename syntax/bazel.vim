@@ -486,7 +486,7 @@ syntax keyword objcBundle objc_bundle
 	\ testonly
 	\ visibility
 
-syntax keyword obcjBundleLibrary objc_bundle_library
+syntax keyword objcBundleLibrary objc_bundle_library
 	\ name
 	\ resources
 	\ asset_catalogs
@@ -742,23 +742,39 @@ syntax keyword workspaceRules local_repository maven_jar maven_server new_git_re
 
 let b:current_syntax = "bazel"
 
-highlight default link bazelTodo      Todo
-highlight default link bazelComment   Comment
-highlight default link bazelString    String
-highlight default link androidBinary  Statement
-highlight default link androidLibrary Statement
-highlight default link ccBinary       Statement
-highlight default link ccLibrary      Statement
-highlight default link ccTest         Statement
-highlight default link javaBinary     Statement
-highlight default link javaImport     Statement
-highlight default link javaLibrary    Statement
-highlight default link javaTest       Statement
-highlight default link javaPlugin     Statement
-highlight default link javaToolchain  Statement
-highlight default link objcRules      Keyword
-highlight default link pythonRules    Keyword
-highlight default link shellRules     Keyword
-highlight default link actionRules    Keyword
-highlight default link workspaceRules Keyword
+highlight default link bazelTodo           Todo
+highlight default link bazelComment        Comment
+highlight default link bazelString         String
+highlight default link androidBinary       Statement
+highlight default link androidLibrary      Statement
+highlight default link ccBinary            Statement
+highlight default link ccLibrary           Statement
+highlight default link ccTest              Statement
+highlight default link javaBinary          Statement
+highlight default link javaImport          Statement
+highlight default link javaLibrary         Statement
+highlight default link javaTest            Statement
+highlight default link javaPlugin          Statement
+highlight default link javaToolchain       Statement
+highlight default link iosApplication      Statement
+highlight default link iosDevice           Statement
+highlight default link iosExtension        Statement
+highlight default link iosExtensionBinary  Statement
+highlight default link iosFramework        Statement
+highlight default link iosFrameworkBinary  Statement
+highlight default link objcBinary          Statement
+highlight default link j2objcLibrary       Statement
+highlight default link objcBundle          Statement
+highlight default link objcBundleLibrary   Statement
+highlight default link objcFramework       Statement
+highlight default link objcImport          Statement
+highlight default link objcLibrary         Statement
+highlight default link objcProtoLibrary    Statement
+highlight default link experimentalIOSTest Statement
+highlight default link iosTest             Statement
+highlight default link objcXCodeProj       Statement
+highlight default link pythonRules         Keyword
+highlight default link shellRules          Keyword
+highlight default link actionRules         Keyword
+highlight default link workspaceRules      Keyword
 
