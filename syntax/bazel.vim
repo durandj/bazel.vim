@@ -723,7 +723,61 @@ syntax keyword objcXCodeProj objc_xcodeproj
 " None, yet...
 
 " Python build rules
-syntax keyword pythonRules py_binary py_library py_test
+syntax keyword pythonBinary py_binary
+	\ name
+	\ deps
+	\ srcs
+	\ data
+	\ args
+	\ default_python_version
+	\ deprecation
+	\ distribs
+	\ features
+	\ licenses
+	\ main
+	\ output_licenses
+	\ srcs_version
+	\ stamp
+	\ tags
+	\ testonly
+	\ visibility
+
+syntax keyword pythonLibrary py_library
+	\ name
+	\ deps
+	\ srcs
+	\ data
+	\ deprecation
+	\ distribs
+	\ features
+	\ licenses
+	\ srcs_version
+	\ tags
+	\ testonly
+	\ visibility
+
+syntax keyword pythonTest py_test
+	\ name
+	\ deps
+	\ srcs
+	\ data
+	\ args
+	\ default_python_version
+	\ deprecation
+	\ distribs
+	\ features
+	\ flaky
+	\ licenses
+	\ local
+	\ main
+	\ shard_count
+	\ size
+	\ srcs_version
+	\ stamp
+	\ tags
+	\ testonly
+	\ timeout
+	\ visibility
 
 " Shell build rules
 syntax keyword shellRules sh_binary sh_library sh_test
@@ -773,7 +827,9 @@ highlight default link objcProtoLibrary    Statement
 highlight default link experimentalIOSTest Statement
 highlight default link iosTest             Statement
 highlight default link objcXCodeProj       Statement
-highlight default link pythonRules         Keyword
+highlight default link pythonBinary        Statement
+highlight default link pythonLibrary       Statement
+highlight default link pythonTest          Statement
 highlight default link shellRules          Keyword
 highlight default link actionRules         Keyword
 highlight default link workspaceRules      Keyword
