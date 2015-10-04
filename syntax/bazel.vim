@@ -45,7 +45,7 @@ syntax keyword androidBinary android_binary
 	\ testonly
 	\ visibility
 
-syntax keyword androidLibrary
+syntax keyword androidLibrary android_library
 	\ name
 	\ deps
 	\ srcs
@@ -73,7 +73,87 @@ syntax keyword androidLibrary
 	\ visibility
 
 " C/C++ build rules
-syntax keyword cCPPRules cc_binary cc_library cc_test
+syntax keyword ccBinary cc_binary
+	\ name
+	\ deps
+	\ srcs
+	\ data
+	\ abi
+	\ abi_deps
+	\ args
+	\ copts
+	\ defines
+	\ deprecation
+	\ distribs
+	\ features
+	\ hdrs_check
+	\ includes
+	\ licenses
+	\ linkopts
+	\ linkshared
+	\ linkstatic
+	\ malloc
+	\ nocopts
+	\ output_licenses
+	\ stamp
+	\ tags
+	\ testonly
+	\ visibility
+
+syntax keyword ccLibrary cc_library
+	\ name
+	\ deps
+	\ srcs
+	\ data
+	\ hdrs
+	\ abi
+	\ abi_deps
+	\ alwayslink
+	\ copts
+	\ defines
+	\ deprecation
+	\ distribs
+	\ features
+	\ hdrs_check
+	\ includes
+	\ licenses
+	\ linkopts
+	\ linkstatic
+	\ nocopts
+	\ tags
+	\ testonly
+	\ textual_hdrs
+	\ visibility
+
+syntax keyword ccTest cc_test
+	\ name
+	\ deps
+	\ srcs
+	\ data
+	\ abi
+	\ abi_deps
+	\ args
+	\ copts
+	\ defines
+	\ deprecation
+	\ distribs
+	\ features
+	\ flaky
+	\ hdrs_check
+	\ includes
+	\ licenses
+	\ linkopts
+	\ linkstatic
+	\ local
+	\ malloc
+	\ nocopts
+	\ shard_count
+	\ size
+	\ stamp
+	\ tags
+	\ testonly
+	\ timeout
+	\ visibility
 
 " Java build rules
 syntax keyword javaRules java_binary java_import java_library java_test java_plugin java_toolchain
@@ -112,7 +192,9 @@ highlight default link bazelComment   Comment
 highlight default link bazelString    String
 highlight default link androidBinary  Statement
 highlight default link androidLibrary Statement
-highlight default link cCPPRules      Keyword
+highlight default link ccBinary       Statement
+highlight default link ccLibrary      Statement
+highlight default link ccTest         Statement
 highlight default link javaRules      Keyword
 highlight default link objcRules      Keyword
 highlight default link pythonRules    Keyword
