@@ -8,10 +8,69 @@ endif
 
 " Language features
 syntax keyword bazelTodo contained TODO FIXME XXX NOTE
-syntax match bazelComment "#.*$" contains=bazelTodo
+syntax match bazelComment '#.*$' contains=bazelTodo
+syntax match bazelString '".*"'
 
 " Android build rules
-syntax keyword androidRules android_binary android_library
+syntax keyword androidBinary android_binary
+	\ name
+	\ deps
+	\ srcs
+	\ assets
+	\ assets_dir
+	\ custom_package
+	\ densities
+	\ deprecation
+	\ dex_shards
+	\ dexopts
+	\ distribs
+	\ exports_manifest
+	\ features
+	\ inline_constants
+	\ javacopts
+	\ legacy_native_support
+	\ licenses
+	\ main_dex_list
+	\ main_dex_list_opts
+	\ main_dex_proguard_specs
+	\ mainifest
+	\ multidex
+	\ nocompress_extensions
+	\ plugins
+	\ proguard_generate_mapping
+	\ proguard_specs
+	\ resource_configuration_filters
+	\ resource_files
+	\ tags
+	\ testonly
+	\ visibility
+
+syntax keyword androidLibrary
+	\ name
+	\ deps
+	\ srcs
+	\ data
+	\ assets
+	\ assets_dir
+	\ custom_package
+	\ deprecation
+	\ distribs
+	\ exports_manifest
+	\ features
+	\ idl_import_root
+	\ idl_parcelables
+	\ idl_srcs
+	\ inline_constants
+	\ javacopts
+	\ licenses
+	\ mainifest
+	\ neverlink
+	\ plugins
+	\ proguard_specs
+	\ resource_files
+	\ tags
+	\ testonly
+	\ visibility
 
 " C/C++ build rules
 syntax keyword cCPPRules cc_binary cc_library cc_test
@@ -50,7 +109,9 @@ let b:current_syntax = "bazel"
 
 highlight default link bazelTodo      Todo
 highlight default link bazelComment   Comment
-highlight default link androidRules   Keyword
+highlight default link bazelString    String
+highlight default link androidBinary  Statement
+highlight default link androidLibrary Statement
 highlight default link cCPPRules      Keyword
 highlight default link javaRules      Keyword
 highlight default link objcRules      Keyword
