@@ -6,12 +6,18 @@ if exists("b:current_syntax")
 	finish
 endif
 
+let b:current_syntax = "bazel"
+
 
 
 " Language features
 syntax keyword bazelTodo contained TODO FIXME XXX NOTE
 syntax match bazelComment '#.*$' contains=bazelTodo
 syntax match bazelString '".*"'
+
+highlight default link bazelTodo    Todo
+highlight default link bazelComment Comment
+highlight default link bazelString  String
 
 
 
@@ -75,6 +81,9 @@ syntax keyword androidLibrary android_library
 	\ tags
 	\ testonly
 	\ visibility
+
+highlight default link androidBinary  Statement
+highlight default link androidLibrary Statement
 
 
 
@@ -160,6 +169,10 @@ syntax keyword ccTest cc_test
 	\ testonly
 	\ timeout
 	\ visibility
+
+highlight default link ccBinary  Statement
+highlight default link ccLibrary Statement
+highlight default link ccTest    Statement
 
 
 
@@ -289,6 +302,13 @@ syntax keyword javaToolchain java_toolchain
 	\ testonly
 	\ visibility
 	\ xlint
+
+highlight default link javaBinary    Statement
+highlight default link javaImport    Statement
+highlight default link javaLibrary   Statement
+highlight default link javaTest      Statement
+highlight default link javaPlugin    Statement
+highlight default link javaToolchain Statement
 
 
 
@@ -729,6 +749,24 @@ syntax keyword objcXCodeProj objc_xcodeproj
 	\ testonly
 	\ visibility
 
+highlight default link iosApplication      Statement
+highlight default link iosDevice           Statement
+highlight default link iosExtension        Statement
+highlight default link iosExtensionBinary  Statement
+highlight default link iosFramework        Statement
+highlight default link iosFrameworkBinary  Statement
+highlight default link objcBinary          Statement
+highlight default link j2objcLibrary       Statement
+highlight default link objcBundle          Statement
+highlight default link objcBundleLibrary   Statement
+highlight default link objcFramework       Statement
+highlight default link objcImport          Statement
+highlight default link objcLibrary         Statement
+highlight default link objcProtoLibrary    Statement
+highlight default link experimentalIOSTest Statement
+highlight default link iosTest             Statement
+highlight default link objcXCodeProj       Statement
+
 
 
 " Protocol buffer rules
@@ -793,6 +831,10 @@ syntax keyword pythonTest py_test
 	\ timeout
 	\ visibility
 
+highlight default link pythonBinary  Statement
+highlight default link pythonLibrary Statement
+highlight default link pythonTest    Statement
+
 
 
 " Shell build rules
@@ -843,6 +885,12 @@ syntax keyword shellTest sh_test
 	\ timeout
 	\ visibility
 
+highlight default link shellBinary  Statement
+highlight default link shellLibrary Statement
+highlight default link shellTest    Statement
+
+
+
 " Actions
 syntax keyword actionListener action_listener
 	\ name
@@ -870,6 +918,9 @@ syntax keyword extraAction extra_action
 	\ testonly
 	\ tools
 	\ visibility
+
+highlight default link actionListener Statement
+highlight default link extraAction    Statement
 
 
 
@@ -944,6 +995,13 @@ syntax keyword genRule genrule
 	\ tools
 	\ visibility
 
+highlight default link fileGroup     Statement
+highlight default link genQuery      Statement
+highlight default link testSuite     Statement
+highlight default link configSetting Statement
+highlight default link genRule       Statement
+
+
 
 
 " Workspace rules
@@ -1016,63 +1074,15 @@ syntax keyword newLocalRepository new_local_repository
 	\ build_file
 	\ path
 
-
-
-let b:current_syntax = "bazel"
-
-highlight default link bazelTodo           Todo
-highlight default link bazelComment        Comment
-highlight default link bazelString         String
-highlight default link androidBinary       Statement
-highlight default link androidLibrary      Statement
-highlight default link ccBinary            Statement
-highlight default link ccLibrary           Statement
-highlight default link ccTest              Statement
-highlight default link javaBinary          Statement
-highlight default link javaImport          Statement
-highlight default link javaLibrary         Statement
-highlight default link javaTest            Statement
-highlight default link javaPlugin          Statement
-highlight default link javaToolchain       Statement
-highlight default link iosApplication      Statement
-highlight default link iosDevice           Statement
-highlight default link iosExtension        Statement
-highlight default link iosExtensionBinary  Statement
-highlight default link iosFramework        Statement
-highlight default link iosFrameworkBinary  Statement
-highlight default link objcBinary          Statement
-highlight default link j2objcLibrary       Statement
-highlight default link objcBundle          Statement
-highlight default link objcBundleLibrary   Statement
-highlight default link objcFramework       Statement
-highlight default link objcImport          Statement
-highlight default link objcLibrary         Statement
-highlight default link objcProtoLibrary    Statement
-highlight default link experimentalIOSTest Statement
-highlight default link iosTest             Statement
-highlight default link objcXCodeProj       Statement
-highlight default link pythonBinary        Statement
-highlight default link pythonLibrary       Statement
-highlight default link pythonTest          Statement
-highlight default link shellBinary         Statement
-highlight default link shellLibrary        Statement
-highlight default link shellTest           Statement
-highlight default link actionListener      Statement
-highlight default link extraAction         Statement
-highlight default link fileGroup           Statement
-highlight default link genQuery            Statement
-highlight default link testSuite           Statement
-highlight default link configSetting       Statement
-highlight default link genRule             Statement
-highlight default link bind                Statement
-highlight default link gitRepository       Statement
-highlight default link httpArchive         Statement
-highlight default link httpFile            Statement
-highlight default link httpJar             Statement
-highlight default link localRepository     Statement
-highlight default link mavenJar            Statement
-highlight default link mavenServer         Statement
-highlight default link newGitRepository    Statement
-highlight default link newHttpArchive      Statement
-highlight default link newLocalRepository  Statement
+highlight default link bind               Statement
+highlight default link gitRepository      Statement
+highlight default link httpArchive        Statement
+highlight default link httpFile           Statement
+highlight default link httpJar            Statement
+highlight default link localRepository    Statement
+highlight default link mavenJar           Statement
+highlight default link mavenServer        Statement
+highlight default link newGitRepository   Statement
+highlight default link newHttpArchive     Statement
+highlight default link newLocalRepository Statement
 
