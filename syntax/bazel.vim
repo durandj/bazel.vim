@@ -6,10 +6,14 @@ if exists("b:current_syntax")
 	finish
 endif
 
+
+
 " Language features
 syntax keyword bazelTodo contained TODO FIXME XXX NOTE
 syntax match bazelComment '#.*$' contains=bazelTodo
 syntax match bazelString '".*"'
+
+
 
 " Android build rules
 syntax keyword androidBinary android_binary
@@ -71,6 +75,8 @@ syntax keyword androidLibrary android_library
 	\ tags
 	\ testonly
 	\ visibility
+
+
 
 " C/C++ build rules
 syntax keyword ccBinary cc_binary
@@ -154,6 +160,8 @@ syntax keyword ccTest cc_test
 	\ testonly
 	\ timeout
 	\ visibility
+
+
 
 " Java build rules
 syntax keyword javaBinary java_binary
@@ -281,6 +289,8 @@ syntax keyword javaToolchain java_toolchain
 	\ testonly
 	\ visibility
 	\ xlint
+
+
 
 " Objective-C build rules
 syntax keyword iosApplication ios_application
@@ -719,8 +729,12 @@ syntax keyword objcXCodeProj objc_xcodeproj
 	\ testonly
 	\ visibility
 
+
+
 " Protocol buffer rules
 " None, yet...
+
+
 
 " Python build rules
 syntax keyword pythonBinary py_binary
@@ -778,6 +792,8 @@ syntax keyword pythonTest py_test
 	\ testonly
 	\ timeout
 	\ visibility
+
+
 
 " Shell build rules
 syntax keyword shellBinary sh_binary
@@ -855,6 +871,8 @@ syntax keyword extraAction extra_action
 	\ tools
 	\ visibility
 
+
+
 " General rules
 syntax keyword fileGroup filegroup
 	\ name
@@ -926,9 +944,77 @@ syntax keyword genRule genrule
 	\ tools
 	\ visibility
 
+
+
 " Workspace rules
-syntax keyword workspaceRules bind git_repository http_archive http_file http_jar
-syntax keyword workspaceRules local_repository maven_jar maven_server new_git_repository new_http_archive new_local_repository
+syntax keyword bind bind
+	\ name
+	\ actual
+	\ deprecation
+	\ distribs
+	\ features
+	\ licenses
+	\ tags
+	\ testonly
+	\ visibility
+
+syntax keyword gitRepository git_repository
+	\ name
+	\ commit
+	\ init_submodules
+	\ remote
+	\ tag
+
+syntax keyword httpArchive http_archive
+	\ name
+	\ sha256
+	\ type
+	\ url
+
+syntax keyword httpFile http_file
+	\ name
+	\ sha256
+	\ url
+
+syntax keyword httpJar http_jar
+	\ name
+	\ sha256
+	\ url
+
+syntax keyword localRepository local_repository
+	\ name
+	\ path
+
+syntax keyword mavenJar maven_jar
+	\ name
+	\ artifact
+	\ repository
+	\ server
+	\ sha1
+
+syntax keyword mavenServer maven_server
+	\ name
+	\ settings_file
+	\ url
+
+syntax keyword newGitRepository new_git_repository
+	\ name
+	\ build_file
+	\ init_submodules
+	\ remote
+
+syntax keyword newHttpArchive new_http_archive
+	\ name
+	\ build_file
+	\ sha256
+	\ strip_prefix
+	\ type
+	\ url
+
+syntax keyword newLocalRepository new_local_repository
+	\ name
+	\ build_file
+	\ path
 
 
 
@@ -978,5 +1064,15 @@ highlight default link genQuery            Statement
 highlight default link testSuite           Statement
 highlight default link configSetting       Statement
 highlight default link genRule             Statement
-highlight default link workspaceRules      Keyword
+highlight default link bind                Statement
+highlight default link gitRepository       Statement
+highlight default link httpArchive         Statement
+highlight default link httpFile            Statement
+highlight default link httpJar             Statement
+highlight default link localRepository     Statement
+highlight default link mavenJar            Statement
+highlight default link mavenServer         Statement
+highlight default link newGitRepository    Statement
+highlight default link newHttpArchive      Statement
+highlight default link newLocalRepository  Statement
 
