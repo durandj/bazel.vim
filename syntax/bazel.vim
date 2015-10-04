@@ -780,7 +780,52 @@ syntax keyword pythonTest py_test
 	\ visibility
 
 " Shell build rules
-syntax keyword shellRules sh_binary sh_library sh_test
+syntax keyword shellBinary sh_binary
+	\ name
+	\ deps
+	\ srcs
+	\ data
+	\ args
+	\ deprecation
+	\ distribs
+	\ features
+	\ licenses
+	\ output_licenses
+	\ tags
+	\ testonly
+	\ visibility
+
+syntax keyword shellLibrary sh_library
+	\ name
+	\ deps
+	\ srcs
+	\ data
+	\ deprecation
+	\ distribs
+	\ features
+	\ licenses
+	\ tags
+	\ testonly
+	\ visibility
+
+syntax keyword shellTest sh_test
+	\ name
+	\ deps
+	\ srcs
+	\ data
+	\ args
+	\ deprecation
+	\ distribs
+	\ features
+	\ flaky
+	\ licenses
+	\ local
+	\ shard_count
+	\ size
+	\ tags
+	\ testonly
+	\ timeout
+	\ visibility
 
 " Actions
 syntax keyword actionRules action_listener extra_action
@@ -830,7 +875,9 @@ highlight default link objcXCodeProj       Statement
 highlight default link pythonBinary        Statement
 highlight default link pythonLibrary       Statement
 highlight default link pythonTest          Statement
-highlight default link shellRules          Keyword
+highlight default link shellBinary         Statement
+highlight default link shellLibrary        Statement
+highlight default link shellTest           Statement
 highlight default link actionRules         Keyword
 highlight default link workspaceRules      Keyword
 
