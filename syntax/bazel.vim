@@ -828,7 +828,32 @@ syntax keyword shellTest sh_test
 	\ visibility
 
 " Actions
-syntax keyword actionRules action_listener extra_action
+syntax keyword actionListener action_listener
+	\ name
+	\ deprecation
+	\ distribs
+	\ extra_actions
+	\ features
+	\ licenses
+	\ mnemonics
+	\ tags
+	\ testonly
+	\ visibility
+
+syntax keyword extraAction extra_action
+	\ name
+	\ data
+	\ cmd
+	\ deprecation
+	\ distribs
+	\ features
+	\ licenses
+	\ out_templates
+	\ requires_action_output
+	\ tags
+	\ testonly
+	\ tools
+	\ visibility
 
 " General rules
 syntax keyword generalRules filegroup genquery test_suite config_setting genrule
@@ -878,6 +903,7 @@ highlight default link pythonTest          Statement
 highlight default link shellBinary         Statement
 highlight default link shellLibrary        Statement
 highlight default link shellTest           Statement
-highlight default link actionRules         Keyword
+highlight default link actionListener      Statement
+highlight default link extraAction         Statement
 highlight default link workspaceRules      Keyword
 
