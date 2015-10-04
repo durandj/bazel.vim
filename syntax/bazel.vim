@@ -2,8 +2,6 @@
 " Langauge: Bazel Build File
 " Maintainer: James Durand
 
-echo "test"
-
 if exists("b:current_syntax")
 	finish
 endif
