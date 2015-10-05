@@ -2,6 +2,17 @@
 
 Syntax highlighting for [Bazel](http://bazel.io) `BUILD` and `WORKSPACE` files.
 
+This plugin does support the official skylark extensions for the following languages:
+
+* Closure
+* Docker
+* Groovy
+* Java App Engine
+* D
+* Rust
+* Jsonnet
+* Scala
+
 ## Installation
 
 ### Pathogen
@@ -38,8 +49,10 @@ not highlight the arguments to the standard build rules. While this is a small
 thing I really like having a visual confirmation that I'm writing the right
 thing and that there's not a typo that I'm going to find when I try to build.
 
+The `bazel.vim` plugin also supports the official Skylark extensions which
+the `vim-bazel` plugin does not at present.
+
 ## TODO
 
 1. Split up support for the build rules based on if a `WORKSPACE` or a `BUILD` file is being edited
-2. Add support for the officially supported skylark extensions.
 

@@ -1086,3 +1086,314 @@ highlight default link newGitRepository   Statement
 highlight default link newHttpArchive     Statement
 highlight default link newLocalRepository Statement
 
+
+
+" Herebe official Bazel plugins
+
+" Closure build rules
+syntax keyword closureJSBinary closer_js_binary
+	\ name
+	\ main
+	\ compilation_level
+	\ externs
+	\ deps
+
+syntax keyword closureJSLibrary closure_js_library
+	\ name
+	\ srcs
+	\ deps
+
+syntax keyword closureStylesheetLibrary closure_stylesheet_library
+	\ name
+	\ srcs
+	\ deps
+
+syntax keyword closureTemplateLibrary closure_template_library
+	\ name
+	\ srcs
+	\ deps
+
+highlight default link closureJSBinary          Statement
+highlight default link closureJSLibrary         Statement
+highlight default link closureStylesheetLibrary Statement
+highlight default link closureTemplateLibrary   Statement
+
+
+
+" Docker build rules
+syntax keyword dockerBuild docker_build
+	\ name
+	\ base
+	\ data_path
+	\ directory
+	\ files
+	\ mode
+	\ tars
+	\ debs
+	\ symlinks
+	\ entrypoint
+	\ cmd
+	\ env
+	\ ports
+	\ volumes
+	\ workdir
+	\ repository
+
+
+
+highlight default link dockerBuild Statement
+
+
+
+" Groovy build rules
+
+syntax keyword groovyLibrary groovy_library
+	\ name
+	\ srcs
+	\ deps
+	\ data
+	\ resources
+	\ args
+	\ classpath_resources
+	\ create_executable
+	\ deploy_manifest_lines
+	\ deprecation
+	\ distribs
+	\ features
+	\ javacopts
+	\ jvm_flags
+	\ licenses
+	\ main_class
+	\ output_licenses
+	\ plugins
+	\ runtime_deps
+	\ stamp
+	\ tags
+	\ testonly
+	\ visibility
+
+syntax keyword groovyAndJavaLibrary groovy_and_java_library
+	\ name
+	\ srcs
+	\ deps
+	\ data
+	\ resources
+	\ args
+	\ classpath_resources
+	\ create_executable
+	\ deploy_manifest_lines
+	\ deprecation
+	\ distribs
+	\ features
+	\ javacopts
+	\ jvm_flags
+	\ licenses
+	\ main_class
+	\ output_licenses
+	\ plugins
+	\ runtime_deps
+	\ stamp
+	\ tags
+	\ testonly
+	\ visibility
+
+syntax keyword groovyBinary groovy_binary
+	\ name
+	\ main_class
+	\ srcs
+	\ deps
+	\ data
+	\ resources
+	\ args
+	\ classpath_resources
+	\ create_executable
+	\ deploy_manifest_lines
+	\ deprecation
+	\ distribs
+	\ features
+	\ javacopts
+	\ jvm_flags
+	\ licenses
+	\ main_class
+	\ output_licenses
+	\ plugins
+	\ runtime_deps
+	\ stamp
+	\ tags
+	\ testonly
+	\ visibility
+
+syntax keyword groovyTest groovy_test
+	\ name
+	\ srcs
+	\ deps
+	\ resources
+	\ jvm_flags
+	\ size
+	\ tags
+
+highlight default link groovyLibrary        Statement
+highlight default link groovyAndJavaLibrary Statement
+highlight default link groovyBinary         Statement
+highlight default link groovyTest           Statement
+
+
+
+" Java App Engine build rules
+syntax keyword appengineWar appengine_war
+	\ name
+	\ jars
+	\ data
+	\ data_path
+
+syntax keyword javaWar java_war
+	\ name
+	\ data
+	\ data_path
+	\ resources
+	\ deprecation
+	\ distribs
+	\ exported_plugins
+	\ exports
+	\ features
+	\ javacopts
+	\ licenses
+	\ neverlink
+	\ plugins
+	\ runtime_deps
+	\ tags
+	\ testonly
+	\ visibility
+
+highlight default link appengineWar Statement
+highlight default link javaWar      Statement
+
+
+
+" D build rules
+syntax keyword dLibrary d_library
+	\ name
+	\ srcs
+	\ deps
+	\ includes
+	\ linkopts
+	\ versions
+
+syntax keyword dSourceLibrary d_source_library
+	\ name
+	\ srcs
+	\ deps
+	\ includes
+	\ linkopts
+	\ versions
+
+syntax keyword dBinary d_binary
+	\ name
+	\ srcs
+	\ deps
+	\ includes
+	\ linkopts
+	\ versions
+
+syntax keyword dTest d_test
+	\ name
+	\ srcs
+	\ deps
+	\ includes
+	\ linkopts
+	\ versions
+
+syntax keyword dDocs d_docs
+	\ name
+	\ dep
+
+highlight default link dLibrary       Statement
+highlight default link dSourceLibrary Statement
+highlight default link dBinary        Statement
+highlight default link dTest          Statement
+highlight default link dDocs          Statement
+
+
+
+" Rust build rules
+syntax keyword rustLibrary rust_library
+	\ name
+	\ srcs
+	\ deps
+	\ data
+	\ crate_features
+	\ rustc_flags
+
+syntax keyword rustBinary rust_binary
+	\ name
+	\ srcs
+	\ deps
+	\ data
+	\ crate_features
+	\ rustc_flags
+
+syntax keyword rustTest rust_test
+	\ name
+	\ srcs
+	\ deps
+	\ data
+	\ crate_features
+	\ rustc_flags
+
+syntax keyword rustDocs rust_docs
+	\ name
+	\ dep
+	\ markdown_css
+	\ html_in_header
+	\ html_before_content
+	\ html_after_content
+
+highlight default link rustLibrary Statement
+highlight default link rustBinary  Statement
+highlight default link rustTest    Statement
+highlight default link rustDocs    Statement
+
+
+
+" Jsonnet build rules
+syntax keyword jsonnetLibrary jsonnet_library
+	\ name
+	\ srcs
+	\ deps
+	\ imports
+
+syntax keyword jsonnetToJson jsonnet_to_json
+	\ name
+	\ src
+	\ deps
+	\ outs
+	\ multiple_outputs
+	\ imports
+
+highlight default link jsonnetLibrary Statement
+highlight default link jsonnetToJson  Statement
+
+
+
+" Scala build rules
+syntax keyword scalaLibrary scala_library
+	\ name
+	\ main_class
+	\ srcs
+	\ data
+	\ scalacopts
+	\ jvm_flags
+	\ deps
+
+syntax keyword scalaBinary scala_binary
+	\ name
+	\ main_class
+	\ srcs
+	\ data
+	\ scalacopts
+	\ jvm_flags
+	\ deps
+
+highlight default link scalaLibrary Statement
+highlight default link scalaBinary  Statement
+
