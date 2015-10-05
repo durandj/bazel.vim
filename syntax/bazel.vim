@@ -14,10 +14,12 @@ let b:current_syntax = "bazel"
 syntax keyword bazelTodo contained TODO FIXME XXX NOTE
 syntax match bazelComment '#.*$' contains=bazelTodo
 syntax match bazelString '".*"'
+syntax keyword load load
 
 highlight default link bazelTodo    Todo
 highlight default link bazelComment Comment
 highlight default link bazelString  String
+highlight default link load         Keyword
 
 
 
